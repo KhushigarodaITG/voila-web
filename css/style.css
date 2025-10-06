@@ -1,0 +1,428 @@
+/*========================================================================= reset css =======================================================*/
+ * {
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
+     letter-spacing: 1px;
+}
+/*========================================================== reusable Classes ===============================================================*/
+ .display {
+     display: flex;
+}
+ .alignItms {
+     align-items: center;
+}
+ .listStyle {
+     list-style: none;
+}
+ .pageWidth {
+     max-width: 1600px;
+     margin: auto;
+}
+ .boxShadow {
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 2px 0px;
+}
+ .center{
+     text-align: center;
+}
+/*================================================ announcement bar ==========================================================================*/
+ .announcementBarWrapper {
+     background-color: #f5fcf8;
+     position: relative;
+     z-index: 1;
+}
+ p:has(> .Paragraph) {
+     padding: 0.3rem 0 0.7rem 0;
+}
+ .Paragraph {
+     color: rgb(83, 86, 90);
+     line-height: 1.2;
+     font-weight: 600;
+     text-align: center;
+     letter-spacing: 1px;
+     font-size: 13px;
+     opacity: 10;
+}
+/*================================================================ header ================================================================*/
+ .headerWrapper {
+     position: sticky;
+     top: 0px;
+     padding-top: 30px;
+     width: calc(100% - 60px);
+     z-index: 1;
+     margin: 0px auto;
+}
+ .headerWrapperInner {
+     padding: 12px 30px;
+     background-color: white;
+     justify-content: space-between;
+     border-radius: 5px;
+     align-items: center;
+     z-index: 100;
+     position: sticky;
+}
+/* hamburger */
+ .hamburgerDiv {
+     display: none;
+}
+/*=============================================== header logo ================================================*/
+ img.logoImg {
+     width: 120px;
+     height: 36px;
+     transform: translate(10px, 5px);
+}
+ .headerLogo {
+     display: block;
+}
+/*======================================== header links =======================================================*/
+ ul.navlinksInner {
+     gap: 2.5rem;
+     margin: 0px 0px 8px 0px;
+     transform: translate(10px, 5px);
+     position: static;
+     z-index: 100;
+}
+ ul.navlinksInner li a {
+     color: rgb(67, 88, 112);
+     opacity: 0.9;
+     font-size: 16px;
+     font-weight: 600;
+}
+ .shop:hover>.arrow-icon, .about:hover>.arrow-icon {
+     transform: rotate(180deg);
+}
+ .aboutLi {
+     position: relative;
+}
+ .shop:hover, .about:hover {
+     text-decoration: underline;
+}
+ .navlinksOuter {
+     display: block;
+}
+ .dropdownMenu {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: -26px;
+     padding: 2rem 1rem 1rem 1.5rem;
+     background: white;
+     width: 190px;
+}
+ .dropdownMenu li {
+     padding: 10px;
+}
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background: white;
+     left: 0;
+     overflow-y: auto;
+     padding: 3rem;
+     right: 0;
+     top: 100%;
+}
+ .aboutLi:hover>.dropdownMenu, .shopLi:hover .dropdown-content {
+     display: block;
+}
+ li.dopper-imager a img {
+     width: 100%;
+     border-radius: 5px;
+}
+ .contentDiv {
+     display: grid;
+     grid-template-columns: 0.3fr 1fr;
+}
+ ul.images-inner-content {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     gap: 16px;
+}
+ li.dopper-imager a h5 {
+     text-align: center;
+     color: rgb(67, 88, 112);
+     margin-top: 0.5rem;
+     text-transform: uppercase;
+     opacity: 0.9;
+}
+ .links-ul-div li a h5, li.dopper-imager a h5 {
+     background-color: transparent;
+     font-size: 1rem;
+     color: rgb(67, 88, 112);
+     font-weight: 700px;
+}
+ .links-ul-div li a {
+     color: rgb(83, 86, 90);
+     font-size: 0.9rem;
+}
+/*============================================== header icons ===========================================*/
+ .headerIconsinner {
+     font-weight: 100;
+     color: #94a0ad;
+     align-items: center;
+     gap: 0.7rem;
+     font-size: 2rem;
+}
+ span.svg-wrapper {
+     width: 24px;
+}
+ .headerIconsWrapper {
+     display: block;
+}
+/*============================= search bar header ================================*/
+ .searchInputInner {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     display: none;
+}
+/* .searchtoggle{
+    display: ;
+}
+ */
+ .searchInputContent {
+    /* transform: translateX(50%);
+     */
+     padding: 12px 30px;
+     border-radius: 5px;
+     border: 1px solid #ddd;
+     width: 800px;
+     transition: opacity 0.3s ease;
+     z-index: 999;
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 2px 0px;
+}
+ .searchInput {
+     display: flex;
+     align-items: center;
+     width: 100%;
+     position: relative;
+}
+ input#searchInput {
+     width: 100%;
+     padding: 2px;
+     border: none;
+     outline: none;
+}
+ span.searchWrapper {
+     position: absolute;
+     right: 0px;
+     top: 50%;
+     transform: translateY(-50%);
+     cursor: pointer;
+     width: 20px;
+     height: 20px;
+}
+ span.cancel {
+     position: absolute;
+     right: -70px;
+     font-family: sans-serif;
+     cursor: pointer;
+     font-size: 23px;
+     color: grey;
+}
+/*============================================================= banner section ================================================================*/
+ section.bannerWrapper {
+     margin-top: -150px;
+}
+ video.video {
+     width: 100%;
+     object-fit: cover;
+     height: 907px;
+}
+ .button, .customButton {
+     width: 130px;
+     height: 130px;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     font-weight: 500;
+     line-height: 1.2;
+     color: white;
+     background-color: rgb(67, 88, 112);
+}
+ .videoContent {
+     position: absolute;
+     top: 705px;
+     left: 110px;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     max-width: 88%;
+}
+ .bannerHeading {
+     font-size: 48px;
+     color: white;
+     width: 790px;
+     line-height: 1.2;
+     text-transform: uppercase;
+     font-weight: 600;
+}
+/* drawer section */
+ .drawerInner {
+     visibility: hidden;
+     position: absolute;
+     top: 0;
+     right: 16px;
+     background: white;
+     height: 100vh;
+     z-index: 1000;
+     transform: translate(16px, 10px);
+     overflow: hidden;
+}
+ .cartDrawerOverlay {
+     position: fixed;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+}
+ .drawer__inner {
+     height: 100%;
+     width: 40rem;
+     max-width: calc(100vw - 3rem);
+     padding: 0 1.5rem;
+     border: .1rem solid rgba(83, 86, 90, .2);
+     border-right: 0;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     transform: translate(100%);
+     transition: transform 2s ease;
+}
+ .drawerInnerEmpty {
+     height: 100%;
+     padding: 0 3.5rem;
+     display: flex;
+}
+ .cartDrawerContent {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+ .closeDrawer {
+     display: inline-block;
+     padding: 0;
+     min-width: 4.4rem;
+     min-height: 4.4rem;
+     box-shadow: 0 0 0 .2rem rgba(var(--color-button), 0);
+     position: absolute;
+     top: 10px;
+     right: -10px;
+     color: rgb(var(--color-foreground));
+     background-color: transparent;
+     border: none;
+     cursor: pointer;
+}
+ .closeDrawer .svg-wrapper {
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     height: 2rem;
+     width: 2rem;
+}
+ .button {
+     font-weight: 500;
+     padding: 17.5px 36px;
+     letter-spacing: 0;
+     border: none;
+     font-size: 16px;
+     border-radius: 5px;
+     text-transform: capitalize;
+}
+ .LoginTitle , .cartEmptyText{
+     margin: 2rem 0 0 0;
+     font-weight: 600;
+     letter-spacing: calc(1.0 * .06rem);
+     color: rgb(83, 86, 90);
+     line-height: calc(1 + .3/max(1, 1.0));
+}
+ .cartEmptyText{
+     margin: 4.5rem 0 2rem;
+}
+ .cartLoginPara {
+     margin-top: .8rem;
+     color: rgb(83,86, 90);
+}
+ .loginLink {
+     color: rgb(83,86, 90);
+     display: inline-block;
+     text-decoration: underline;
+     text-underline-offset: .3rem;
+     background-color: transparent;
+     font-size: 1em;
+}
+/* ========================================================== media Query ================================================================*/
+ @media (max-width:1050px) {
+     .hamburgerDiv {
+         display: block;
+         font-size: 25px;
+         color: grey;
+         position: relative;
+    }
+     .cancelTwo {
+         margin-right: 7px;
+    }
+     .navlinksOuter {
+         display: none;
+         position: absolute;
+         top: 90%;
+         left: -10px;
+         width: 100%;
+         transition: left 0.3s ease-in-out;
+    }
+     ul.navlinksInner {
+         gap: 0.5rem;
+         flex-direction: column;
+         align-items: start;
+         background: white;
+         border-radius: 0 0 3px 3px;
+         padding: 2rem;
+    }
+     .bannerHeading {
+         font-size: 34px;
+         width: 500px;
+    }
+     .dropdownMenu {
+         display: none;
+    }
+     .dropdown-content {
+         display: none;
+    }
+     .videoContent {
+         max-width: 75%;
+         flex-direction: column-reverse;
+         bottom: 540px;
+         left: 80px;
+    }
+     .searchInputContent {
+         width: 280px;
+    }
+}
+ @media (max-width:500px) {
+     video.video {
+         height: 750px;
+    }
+     .headerWrapperInner {
+         padding: 12px 12px;
+    }
+     .bannerHeading {
+         font-size: 34px;
+         width: 250px;
+         margin-right: 70px;
+    }
+     .customButton {
+         width: 130px;
+         height: 50px;
+         border-radius: 50px;
+         margin-right: 70px;
+    }
+     .headerLogo img {
+         width: 70px;
+    }
+     .headerIconsinner {
+         gap: 0.2rem;
+         font-size: 2rem;
+    }
+}
